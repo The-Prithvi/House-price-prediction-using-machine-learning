@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    
+    <!-- Additional meta tags, stylesheets, or scripts -->
+    <meta name="description" content="Your page description">
+    <link rel="stylesheet" href="./app.css">
+    <script src="app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: antiquewhite">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="font-weight: 800; font-size: 30px;">DREAM HOME</a>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a onclick="document.getElementById('predict').scrollIntoView({ behavior: 'smooth' })" class="nav-link active" aria-current="page" href="#">Predictor</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="homepage_main">
+        <div class="head_text">
+          <h1 class = "homepage_quote" style="color: white;">GET YOUR DREAM HOME</h1>
+          <p style="color: antiquewhite;">Get the predicted price for your dream home in Bangalore with our new predictor feature, click on the below button to predicrt the price based on your customization</p>
+          <button onclick="document.getElementById('predict').scrollIntoView({ behavior: 'smooth' })" type="button" class="btn btn-primary" style="background-color: rgb(199, 119, 20); font-weight: 600; border: none;">Predict Price</button>
+        </div>
+      </div>
+
+
+      <div class="predict" id = "predict">
+       <div class="inputs">
+        <form id = "predict_form">
+          <div class="centered" style="display: flex; align-items: center; flex-direction: column; padding-bottom: 20px;">
+         <h3 style="font-weight: 800; padding-top: 5px;">PREDICT PRICE</h3>
+         </center><div class="horizontal_line"></div>
+        </div>
+         
+          <label for="areaInput">Enter Area size</label>
+          <input type="number" min = "600" id="areaInput" name="areaInput" required>
+  
+          <label for="bhkInput">Enter Number of room (BHK)</label>
+          <input type="number" min = "1" max="10" id="bhkInput" name="bhkInput" required>
+  
+          <label for="bathroomsInput" >Enter Number of Bathroom</label>
+          <input type="number" min = "1" max="10" id="bathroomsInput" name="bathroomsInput" required>
+  
+          <label for="locationSelect">Select Location:</label>
+          <select id="locationSelect" name="locationSelect" required>
+
+          </select><br><br>
+  
+          <center><button type="submit" class="btn btn-success">Submit</button></center>
+        </form>
+       </div>
+
+        <div class="display_predicted_value">
+          <h1 style="text-align: center; font-weight: 700;">Predicted Value:</h1><br>
+          <p id = rs_para> (Fill the form to get predicted value)</p>
+          <div class="predict_content" id = "predict_content">
+            <h1 style="color: red; text-align: center;" id="predict_rs"></h1>
+          </div>
+
+        </div>
+
+      </div>
+</body
